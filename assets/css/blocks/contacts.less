@@ -1,0 +1,61 @@
+//main: ../styles.less
+
+.contacts {
+    margin-bottom: 90px;
+}
+
+.contacts__subtitle {
+    margin-bottom: 35px;
+}
+
+.contacts__link {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 35px;
+    padding-left: 70px;
+    position: relative;
+    margin-bottom: 50px;
+    display: block;
+
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        top: -7px;
+        z-index: 1;
+        width: 55px;
+        height: 60px;
+        background: url("../images/phone-icon.png") center no-repeat;
+    }
+}
+
+.contacts__icons {
+    display: flex;
+    justify-content: center;
+
+    & img {
+        margin: 0 15px;
+        transition: .5s ease;
+    }
+
+    & img:hover {
+        transform: translateY(-3px);
+    }
+}
+
+//----media----//
+
+@media(max-width:480px) {
+    .contacts__link {
+        font-size: 30px;
+
+        &:before {
+            top: -15px;
+        }
+    }
+
+    .contacts__subtitle {
+        margin-bottom: 20px;
+    }
+}

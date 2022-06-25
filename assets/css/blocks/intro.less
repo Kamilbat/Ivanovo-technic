@@ -1,0 +1,173 @@
+//main: ../styles.less
+
+.intro {
+    margin-bottom: 50px;
+}
+
+.intro__inner {
+    background: linear-gradient(to right, gray,white);
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.intro__block {
+    width: 100%;
+    background: url("../images/technic.png") bottom right no-repeat;
+}
+
+.intro__content {
+    width: 48%;
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+.intro__title {
+    font-size: 35px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+.intro__subtitle {
+    margin-bottom: 25px;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.2;
+    font-family: "Roboto", sans-serif;
+    padding-left: 55px;
+    position: relative;
+
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        width: 44px;
+        height: 33px;
+        top: 15px;
+        background: url("../images/jackdaw.png") left no-repeat;
+    }
+}
+
+.intro__subtitle--jackdaw {
+    margin-bottom: 30px;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.2;
+    font-family: "Roboto", sans-serif;
+    padding-left: 55px;
+    position: relative;
+
+     &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        width: 44px;
+        height: 33px;
+        top: -5px;
+        background: url("../images/jackdaw.png") left no-repeat;
+    }
+}
+
+.intro__text {
+    font-family: "Roboto", sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+.intro__span {
+    font-size: 24px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+}
+
+//----media----//
+
+@media(max-width:990px) {
+    .intro__block {
+        height: 825px;
+        background-position: bottom;
+    }
+
+    .intro__content {
+        width: 100%;
+    }
+}
+
+@media(max-width:767px) {
+    .intro__block {
+        background-size: 450px 400px;
+    }
+}
+
+@media(max-width:600px) {
+    .intro__block {
+        background-size: 400px 350px;
+    }
+
+
+}
+
+@media(max-width:480px) {
+    .intro__block {
+        background-size: 300px 250px;
+        height: 700px;
+    }
+
+    .intro__title {
+        font-size: 25px;
+    }
+
+    .intro__subtitle {
+        font-size: 20px;
+        padding-left: 40px;
+
+        &:before {
+            background-size: 30px 20px;
+            top: 10px;
+        }
+
+        &--jackdaw {
+            font-size: 20px;
+            padding-left: 40px;
+
+            &:before {
+                background-size: 30px 20px;
+                top: -2px;
+            }
+        }
+
+    }
+
+    .intro__span {
+        font-size: 20px;
+    }
+
+    .intro__text {
+        font-size: 20px;
+    }
+}
+
+@media(max-width:367px) {
+    .intro__title {
+        font-size: 23px;
+    }
+
+    .intro__subtitle {
+        font-size: 17px;
+
+        &--jackdaw {
+            font-size: 17px;
+        }
+    }
+
+    .intro__text {
+        font-size: 17px;
+    }
+}

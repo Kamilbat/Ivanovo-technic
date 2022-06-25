@@ -1,0 +1,67 @@
+//main: ../styles.less
+
+.footer {
+    background-color: #d0d0d0;
+    width: 100%;
+}
+
+.footer__inner {
+    padding: 25px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__text {
+    font-size: 24px;
+    font-family: "Roboto", sans-serif;
+    line-height: 1.2;
+    font-weight: 400;
+    text-align: center;
+    white-space: pre-line;
+}
+
+.footer__contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer__phone {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+//----media----//
+
+@media(max-width:767px) {
+    .footer__inner {
+        flex-wrap: wrap;
+    }
+
+    .footer__contacts {
+        order: 2;
+    }
+
+    .footer__text {
+        order: 3;
+        text-align: center;
+        width: 100%;
+        margin-top: 30px;
+    }
+}
+
+
+@media(max-width:480px) {
+    .footer__inner {
+        flex-direction: column;
+    }
+
+    .footer__logo {
+        margin-bottom: 30px;
+    }
+}

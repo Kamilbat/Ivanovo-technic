@@ -1,0 +1,165 @@
+//compress: true
+
+@font-face {
+    font-family: "FranklinGothic_demi";
+    font-style: normal;
+    font-weight: 400;
+    src: local("FranklinGothic_demi"),
+    url("../fonts/franklingothic_demi.ttf") format("ttf");
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-family: "FranklinGothic_demi", sans-serif;
+    font-size: 24px;
+    color: #000;
+    line-height: 1;
+}
+
+body.lock {
+    overflow: hidden;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+    padding: 0;
+    margin: 0;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    display: block;
+    vertical-align: top;
+}
+
+ul, ol, li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+input {
+    font-family: inherit;
+    padding: 0;
+    margin: 0;
+    border: 0;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+//---------------//
+
+.container {
+    max-width: 1200px;
+    padding: 0 10px;
+    margin: 0 auto;
+    width: 100%;
+
+    @media(max-width:1200px) {
+        max-width: 991px;
+    }
+    @media(max-width:990px) {
+        max-width: 767px;
+    }
+    @media(max-width:767px) {
+        max-width: 100%;
+    }
+}
+
+.wrapper {
+    min-height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.main {
+    flex: 1 1 auto;
+    padding-top: 180px;
+
+    @media(max-width:1200px) {
+        padding-top: 150px;
+    }
+    @media(max-width:767px) {
+        padding-top: 80px;
+    }
+}
+
+.button {
+    font-size: 30px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    background-color: #e62e2a;
+    box-shadow:inset 0px 5px 5px rgba(255, 255,255, .5),
+    inset 0px -5px 5px rgba(0, 0, 0, .5);
+    text-transform: uppercase;
+    height: 60px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .2s ease;
+
+    &:hover {
+        background-color: #ce120e;
+        box-shadow:inset 0px 5px 5px rgba(255, 255,255, .5),
+    inset 0px -4px 6px rgba(0, 0, 0, .5);
+    }
+}
+
+.title {
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+
+    @media(max-width:480px) {
+        font-size: 25px;
+        margin-bottom: 15px;
+    }
+}
+
+.subtitle {
+    margin-bottom: 60px;
+    font-family: "Roboto", sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.2;
+
+    @media(max-width:480px) {
+        margin-bottom: 40px;
+        font-size: 20px;
+    }
+}
+
+//----blocks----//
+
+@import "blocks/header.less";
+@import "blocks/intro.less";
+@import "blocks/purchase.less";
+@import "blocks/contacts.less";
+@import "blocks/footer.less";
